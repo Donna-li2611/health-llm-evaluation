@@ -1,3 +1,49 @@
+# Health LLM Evaluation · 健康问答评测
+
+**A reproducible evaluation design for comparing health answers and tracing the evidence behind them.**
+
+## Research question
+
+Under fixed questions and recorded conditions, do health answers show repeatable differences in factual reliability, evidence use and uncertainty expression?
+
+The focus is an evaluation method that can be checked and repeated. API models and consumer products, search conditions and sampling dates must be distinguished.
+
+## My contribution
+
+I frame the question, define the comparison and evidence requirements, shape the pilot protocol and rubric, and review how failures and uncertainty should be recorded. Design, tooling and documentation are AI-assisted.
+
+## What you can inspect
+
+| Artifact | Purpose |
+| --- | --- |
+| [Protocol](docs/protocol.md) | Fixed question/prompt versions, recorded model and access conditions, repeated runs and blinded review |
+| [Rubric](docs/rubric.md) | Factuality, completeness, safety boundaries, sources and expression |
+| [20 pilot questions](data/questions.csv) | Author-written seed questions for trial runs, not an expert-approved gold standard |
+| [Data contract](docs/data-contract.md) | Traceable answers, failures and unscored states |
+| [Validator](scripts/validate_dataset.py) | Structural checks for IDs, timestamps and missing fields |
+| [Result status](results/README.md) | Explicitly records that formal model results are not yet available |
+
+**Current stage: method and tool preparation.** There is no published formal model comparison, ranking or clinical validation. Synthetic answers demonstrate a format; they are not model outputs or patient cases. Tool tests do not establish medical correctness.
+
+### Run the public tools
+
+Python 3.9+, no API key needed:
+
+```bash
+python3 scripts/validate_dataset.py data/questions.csv examples/answers.synthetic.jsonl
+python3 -m unittest discover -s tests -v
+```
+
+Next steps are documented in the [roadmap](docs/roadmap.md): a frozen pilot set, real recorded runs, reference evidence and independent scoring.
+
+[Portfolio home](https://github.com/Donna-li2611)
+
+**README reviewed: 2026-10-06.** This refresh adds a reviewer introduction, not new experiment results.
+
+---
+
+## 中文说明
+
 # 健康问答评测 · Health LLM Evaluation
 
 **让模型回答可以被追溯、比较与复核。**

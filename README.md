@@ -1,5 +1,7 @@
 # Health LLM Evaluation · 健康问答评测
 
+**A self-directed personal project, initiated and developed by Xiaozhen Li (Donna).** I carry out the project's design, research and development myself, using AI tools in the workflow.
+
 **A reproducible evaluation design for comparing health answers and tracing the evidence behind them.**
 
 ## Research question
@@ -44,6 +46,8 @@ Next steps are documented in the [roadmap](docs/roadmap.md): a frozen pilot set,
 
 ## 中文说明
 
+**这是我个人独立开展的项目，构思、设计、研究、制作与已有成果均由我本人完成，过程中使用AI工具辅助。**
+
 # 健康问答评测 · Health LLM Evaluation
 
 **让模型回答可以被追溯、比较与复核。**
@@ -83,6 +87,6 @@ tests/       校验器的错误与边界用例
 results/     正式结果状态与报告模板
 ```
 
-本公开包从原项目的方法设计中提炼，不包含内部品牌监测任务、患者信息或部署凭据。拟覆盖的平台与采集方式须在每次实验中重新确认；尚未接入的平台不会列为已完成能力。
+本公开包整理自我个人项目的方法设计，使用自编试运行题与合成格式示例。拟覆盖的平台与采集方式须在每次实验中重新确认；尚未接入的平台不会列为已完成能力。
 
 项目使用 AI 辅助设计与实现。公开题目用于研究准备，不提供诊断或治疗意见。
